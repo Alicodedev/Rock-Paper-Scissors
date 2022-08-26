@@ -8,16 +8,47 @@ function getComputerChoice(x){
 console.log(getComputerChoice(arr));
 
 // Round function
-var player = prompt("Player turn");
-var computer = prompt("Computer turn");
-function playround(playerselection,computerselection){
+const playerSelection = prompt("Player turn");
+const computerSelection = prompt("Computer turn");
+function playround(playerSelection,computerSelection){
 	var i = true; // flag 
 	while (i == true){
-  if (playerselection == "rock" && computerselection == "paper"){
+  if (playerSelection == "rock" && computerSelection == "paper"){
+  	console.log("player wins");
+    i = false;//Break 
+  	}
+    
+  if (playerSelection == "paper" && computerSelection == "rock"){
+  	console.log("Computer wins");
+    i = false;
+  	}
+    
+  if (playerSelection == "rock" && computerSelection == "sisscors"){
   	console.log("player wins");
     i = false;
   	}
+    
+  if (playerSelection == "sisscors" && computerSelection == "rock"){
+  	console.log("Computer wins");
+    i = false;
+  	}
+    
+  if (playerSelection == "sisscors" && computerSelection == "paper"){
+  	console.log("player wins");
+    i = false;
+  	}
+    
+  if (playerSelection == "paper" && computerSelection == "sisscors"){
+  	console.log("Computer wins");
+    i = false; 
+  	}
+    
+	else if(playerSelection == computerSelection){
+    console.log("tie");
+    i = false; 
+  	}
+    
   }
 }
 
-playround(player,computer)
+playround(playerSelection,computerSelection)
