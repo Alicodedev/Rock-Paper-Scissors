@@ -5,11 +5,18 @@ function getComputerChoice(x){
 	return x;
 }
 
-console.log(getComputerChoice(arr));
+function game(){ 
+	const rounds = prompt("Enter amount of rounds you'd like to play: ");
+  var playerscore = 0;
+  var compscore = 0;
+  const playerSelection = prompt("Player turn");
+	const computerSelection = prompt("Computer turn");
+	for(var i = 0; i < rounds; ++i){ // rounds that game will be ran
+		playround(playerSelection,computerSelection);
+	}
+}
 
-// Round function
-const playerSelection = prompt("Player turn");
-const computerSelection = prompt("Computer turn");
+//gamerounds function
 function playround(playerSelection,computerSelection){
 	var i = true; // flag 
 	while (i == true){
@@ -51,4 +58,4 @@ function playround(playerSelection,computerSelection){
   }
 }
 
-playround(playerSelection,computerSelection)
+game()
