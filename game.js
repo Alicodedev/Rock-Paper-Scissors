@@ -76,4 +76,4 @@ function playround(playerSelection,computerSelection){
   }
 }
 
-game()
+//game()
