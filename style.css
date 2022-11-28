@@ -68,14 +68,14 @@ div{
     font-weight: bold;
 }
 
-.user_choice,.bot_choice{
+#user_choice,#bot_choice{
     border: 1px solid black;
     padding: 5px;
     
 
 }
 
-.user_choice{
+#user_choice{
     transform: scaleX(-1);
 }
 

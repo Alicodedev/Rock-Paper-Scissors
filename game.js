@@ -4,7 +4,8 @@ var compscore = 0;
 const btn_rock = document.querySelector('.rock');
 const btn_paper = document.querySelector('.paper');
 const btn_scissors = document.querySelector('.scissors');
-
+let image = document.querySelector('#user_choice > img'); // accessing img element within div of that id
+let image_bot = document.querySelector('#bot_choice > img')
 
 function getComputerChoice(x){ // generates random choices for computer
 	var x = x[Math.floor(Math.random() * x.length)];
@@ -13,24 +14,23 @@ function getComputerChoice(x){ // generates random choices for computer
 
 
 // playser event choices selection
-
 btn_rock.addEventListener('click', () =>{
-    //document.getElementsByClassName("user_score")[0].src = "/images/Rock.png";
     
+    image.src = "images/rock.png";
     let playerSelection = arr[0].toLowerCase();
     game(playerSelection);
   
   });
   
 btn_paper.addEventListener('click', () =>{
-    
+    image.src = "images/paper.png";
     let playerSelection = arr[1].toLowerCase();
     game(playerSelection);
   
   });
   
 btn_scissors.addEventListener('click', () =>{
-
+    image.src = "images/scissors.png";
     let playerSelection = arr[2].toLowerCase();// player variable == button type 
     // call game function 
     game(playerSelection);
@@ -47,6 +47,7 @@ function game(user_in){
 	for(let i = 0; i < 1; ++i){ // rounds that game will be ran
     
 		let computerSelection = getComputerChoice(arr).toLowerCase();
+    image_bot.src = `images/${computerSelection}.png`; // bot selection is displayed
 		playround(user_in,computerSelection);
   
     if (i+1 == 1){
@@ -58,8 +59,8 @@ function game(user_in){
         if (playerscore == 5){
           const element = document.getElementById("winner");
           element.textContent = 'Player wins';
-      	  
-
+          playerscore = playerscore
+  
         }
       }
     	
@@ -71,7 +72,8 @@ function game(user_in){
         if(compscore == 5){
           const element1 = document.getElementById("winner");
           element1.textContent = 'Computer wins';
-          
+          compscore = compscore
+
         }
         
       }
@@ -121,6 +123,8 @@ function playround(user_in,computerSelection){
     
 	else if(user_in == computerSelection){
     console.log("tie");
+    const element = document.getElementById("winner");
+    element.textContent = 'Tie';
     i = false; 
   	}
     
