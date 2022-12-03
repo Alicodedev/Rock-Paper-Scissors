@@ -1,0 +1,46 @@
+
+@font-face {
+  font-family: title;
+  src:url(fonts-style/cartoon-title.ttf);
+}
+
+@font-face {
+  font-family: players;
+  src: url(fonts-style/pow.ttf);
+}
+
+
+@font-face {
+  font-family: win;
+  src: url(fonts-style/winner-font.ttf);
+}
+
+
+
+h1{
+    font-family: title;
+    font-weight:1;
+    font-size: 90px
+}
+
+.user,.bot{
+  font-family: players;
+  font-weight:1;
+  font-size: 90px
+ 
+  
+}
+
+#bot_score,#user_score{
+  font-family: players;
+  font-weight:1;
+  font-size: 90px
+}
+
+
+#winner{
+  font-family: win;
+  font-weight:1;
+  font-size: 90px
+
+}

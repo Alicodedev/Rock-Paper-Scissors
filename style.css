@@ -2,13 +2,14 @@
 body{  
     display: flex;
     flex-direction: column;
-    height: 400px;
+ 
+    background-color: #F6E3C3;
     
 }
 
 div{
     border: 1px solid black; 
-    padding: 5px
+    padding: 2px
 }
 
 .selectors{
@@ -19,35 +20,47 @@ div{
 
     border: 1px solid black;
     gap: 60px;
-    margin-top: 10px;    
+    margin-top: 10px; 
+       
 }
 
-.rock{
+.rock button,.paper button,.scissors button{
+    transition: all .5s ease;
+    color: #597bc0;
+    border: 3px solid white;
+    background-color: #b3d1ff;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    
 
 }
 
-.paper{
 
-}
-
-.scissors{
-
+button:hover {
+    color: #ffffff;
+    background-color: #80b3ff;
 }
 
 .title{
-    color:red;
+    color:rgb(230, 53, 53);
     text-align: center;
 }
 
 #user_score{
-    color:rgb(255, 0, 0);
+    color:  #80b3ff;
     text-align: center;
     font-size: 40px;
     font-weight:bold;
 }
 
 #bot_score{
-    color:rgb(255, 0, 0);
+    color: #F84443;
     text-align: center;
     font-size: 40px;
     font-weight:bold;
@@ -57,23 +70,38 @@ div{
     display:flex;
     justify-content: center;
     gap: 260px;
-    padding:250px;
     margin-top: 10px;
 
 }
 
 .user,.bot{
+    
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-}
-
-#user_choice,#bot_choice{
-    border: 1px solid black;
-    padding: 5px;
     
 
 }
+
+#user_choice img,#bot_choice img{
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 250px;  
+    border-radius: 50%;
+    background-color: #87CEFA;
+    
+    
+
+}
+
+#bot_choice img{
+    background-color: #F84443;
+    
+}
+
 
 #user_choice{
     transform: scaleX(-1);
